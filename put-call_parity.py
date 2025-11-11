@@ -18,10 +18,10 @@ Where:
 """)
 
 # Inputs
-S = st.number_input("Current Stock Price (S)", min_value=0.0, value=0, step=1.0)
-K = st.number_input("Strike Price (K)", min_value=0.0, value=0, step=1.0)
-C = st.number_input("Call Option Price (C)", min_value=0.0, value=0, step=0.1)
-r = st.number_input("Annual Risk-Free Rate (r) as decimal (e.g., 0.05)", min_value=0.0, max_value=1.0, value=0.065, step=0.01)
+S = st.number_input("Current Stock Price (S)", min_value=0.0, value=100.0, step=1.0)
+K = st.number_input("Strike Price (K)", min_value=0.0, value=100.0, step=1.0)
+C = st.number_input("Call Option Price (C)", min_value=0.0, value=10.0, step=0.1)
+r = st.number_input("Annual Risk-Free Rate (r) as decimal (e.g., 0.05)", min_value=0.0, max_value=1.0, value=0.05, step=0.01)
 days = st.number_input("Time to Expiration in Days", min_value=0, value=365, step=1)
 
 # Add input for actual market put price
@@ -100,4 +100,3 @@ if calculate_button:
     > **Note**: This assumes **European options** on a **non-dividend-paying stock**.  
     > If the actual market put price differs significantly, it may indicate an arbitrage opportunity.
     """)
-
